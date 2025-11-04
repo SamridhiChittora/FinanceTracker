@@ -1,5 +1,5 @@
 {    
-"TableName":"newSpendingData",    
+"TableName":"SpendingTrackingTable",    
         "Item":{      
             "id": {"S" : "$context.requestId"},
             "date": {"S": "$input.params('date')"}, 
@@ -10,7 +10,7 @@
             }}
 
 
-{    "TableName":"budget",    
+{    "TableName":"budgetTrackingTable",    
             "Item":{
                     "budget-id": {"S": "Value"},
                     "actual-budget": {"S": "$input.params('budget')"}
@@ -26,11 +26,12 @@ APIGateway-to-DynamoDB Policy/Permissions
             "Sid": "Statement1",
             "Effect": "Allow",
             "Action": [
-                "dynamodb:putItem",
+                "dynamodb:Putitem",
                 "dynamodb:Query",
                 "dynamodb:DeleteItem"
             ],
             "Resource": "*"
         }
     ]
+
 }
