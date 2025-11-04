@@ -519,7 +519,7 @@
             const apiUrl = `https://fbmvanj6p4.execute-api.us-east-1.amazonaws.com/Dev/updateExpenses?date=${encodeURIComponent(date)}&item=${encodeURIComponent(item)}&price=${encodeURIComponent(price)}&income=${encodeURIComponent(income)}&category=${encodeURIComponent(category)}`;
             
             try {
-                const response = await fetch(apiUrl, { method: 'POST','GET' });
+                const response = await fetch(apiUrl, { method: 'POST' });
                 const result = await response.json();
                 console.log('API Response:', result);
                 
@@ -575,7 +575,7 @@
             const apiUrl = `https://fbmvanj6p4.execute-api.us-east-1.amazonaws.com/Dev/updateBudget?budget=${encodeURIComponent(newBudget)}`;
             
             try {
-                const response = await fetch(apiUrl, { method: 'POST'.'GET' });
+                const response = await fetch(apiUrl, { method: 'POST' });
                 const result = await response.json();
                 console.log('Budget Update API Response:', result);
                 
